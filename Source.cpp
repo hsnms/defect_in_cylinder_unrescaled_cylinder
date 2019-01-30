@@ -1,4 +1,4 @@
-//Source.cpp helps to find the specific equilibrium nematic defect structures in an unrescale cylindrical nematic bridge given specific parameters including the Frank constant ratio and aspect ratio.
+//Source.cpp helps to find the specific equilibrium nematic defect structures in an unrescale cylindrical nematic bridge given specific parameters including the Frank constant ratio and aspect ratio. Case (1): keep the thin layer near the lateral surface.
 
 //We consider homeotropic boundary conditions and proper inner boundary conditions (after we apply a cut-off of the defect core), and solve the Euler-Lagrange equation. Because of the cylindrical symmetry, we only consider the rectangular diametrical plane.
 

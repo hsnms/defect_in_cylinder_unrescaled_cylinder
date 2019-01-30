@@ -1,4 +1,4 @@
-//Source.cpp helps to find the transition lines equilibrium nematic defect structures in an unrescale cylindrical nematic bridge given specific parameters including the Frank constant ratio and aspect ratio.
+//Source.cpp helps to find the transition lines equilibrium nematic defect structures in an unrescale cylindrical nematic bridge given specific parameters including the Frank constant ratio and aspect ratio. Case (1): keep the thin layer near the lateral surface.
 
 //We consider homeotropic boundary conditions and proper inner boundary conditions (after we apply a cut-off of the defect core), and solve the Euler-Lagrange equation. Because of the cylindrical symmetry, we only consider the rectangular diametrical plane.
 
@@ -67,7 +67,7 @@ int main()
 	  kk=1+2*b;/*location of the smallest ring*/
 	  // printf ("Types of defect structures (radial:1.0, hyperbolic:-1.0), m:");
 	  //	scanf("%lf", &m);
-	  m=-1.0;
+	  m=1.0;
 	
 	fp = fopen ("Transition.txt","w");
 	  if (fp == NULL) {
@@ -87,7 +87,7 @@ int main()
    for(R0=R1;R0<=R2;R0=R0+RR)//different aspect ratios
 	     {	  
 
-	 	m=-1.0;
+	       //	m=-1.0;
 	  
     u=dmatrix2new(1,(int)(n*R0-R0+1),1,(int)(n*H-H+1));
 	v=dmatrix2new(1,(int)(n*R0-R0+1),1,(int)(n*H-H+1));
@@ -379,10 +379,10 @@ nrfunc3new(f,u,n,q,kk,b,R0,K,H);
 	}
 	  } /*end of the first major*/
 
-	printf("Defect type m=%f, Frank constant ratio K=%f, aspect ratio R0=%f, ring radius=%d, total energy=%f\n",m, K,R0,radius,result);	
-	fprintf(fp,"Defect type m=%f, Frank constant ratio K=%f, aspect ratio R0=%f, ring radius=%d, total energy=%f\n",m, K,R0,radius,result);
+	//	printf("Defect type m=%f, Frank constant ratio K=%f, aspect ratio R0=%f, ring radius=%d, total energy=%f\n",m, K,R0,radius,result);	
+	//	fprintf(fp,"Defect type m=%f, Frank constant ratio K=%f, aspect ratio R0=%f, ring radius=%d, total energy=%f\n",m, K,R0,radius,result);
 
-	//	m=1.0;
+		m=1.0;
 	if (m==1.0)
 	    {  /*start of the first major*/
                //point defect
